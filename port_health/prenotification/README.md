@@ -8,8 +8,8 @@ To ensure searchability, please use the following standards for the `identifier`
 * **For LoLo (Containers):** Enter the Container Number.
 
 ## 🔑 Organization Tracking
-* **global_id**: This must be your organization's name.
-* **system_code**: This should be the name of the software sending the data (e.g., `CNS`, `DESTIN8`, `INTERNAL_ERP`).
+* **global_id**: This must be your organisation's name.
+* **system_code**: This should be the name of the software sending the data (e.g., `TWIN`, `DESTIN8`, `INTERNAL_ERP`).
 
 ## 📁 Related Files
 * [View Technical Schema](./schema.json)
