@@ -1,4 +1,4 @@
-# Prenotification Signal
+# Pre-notification Signal
 
 This signal is used to notify Port Health Authorities of an arriving consignment. It is the primary data exchange for high-risk goods entering the UK via the Information Sharing Network (ISN).
 
