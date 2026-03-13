@@ -1,0 +1,22 @@
+{
+  "global_id": "IOTA",
+  "system_code": "TWIN",
+  "payload": {
+    "chedNumbers": ["CHEDP.GB.2026.1234567"],
+    "cnCodes": ["0201300010"],
+    "commodityDescription": "Fresh boneless bovine meat",
+    "countryOfOrigin": "IE",
+    "exporterEORI": "IE987654321",
+    "importerEORI": "GB123456789",
+    "location": "Port of Dover",
+    "mode": "RoRo",
+    "transportMeans": [
+      {
+        "transportMovementType": "Truck",
+        "identifier": "AB26 CDE",
+        "affixedSeal": "SEAL-12345"
+      }
+    ],
+    "sealNumbers": ["SEAL-99-88-77"]
+  }
+}
