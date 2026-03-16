@@ -8,7 +8,7 @@ The goal of this library is to provide a clear, readable, and verifiable standar
 ## 📂 Categories
 Signals are organised into directories based on the business domain for example:
 
-* **/port_health**: Core signals on pre-notifications, status updates and departures.
+* **/port-health**: Core signals on pre-notifications, status updates and departures.
 
 
 ## 📄 Structure of a Signal Type
