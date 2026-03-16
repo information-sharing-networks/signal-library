@@ -2,16 +2,16 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "required": [
-    "global_id",
-    "system_code",
+    "sourceRef",
+    "systemCode",
     "payload"
   ],
   "properties": {
-    "global_id": {
+    "sourceRef": {
       "type": "string",
-      "description": "Unique identifier for the sending organisation (e.g. IOTA, DFDS)."
+      "description": "The unique reference or job number from the originating system for traceability."
     },
-    "system_code": {
+    "systemCode": {
       "type": "string",
       "description": "Code identifying the source system (e.g., TWIN, DESTIN8,)."
     },
