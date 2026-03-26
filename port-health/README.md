@@ -13,5 +13,5 @@ To ensure searchability, please use the following standards for the `identifier`
 
 ## 📁 Related Files
 * [View Technical Schema](./schema.json)
-* [View Sample Data (Truck Example)](./example.json)
+* [View Sample Data (Truck Example)](./pre-notification/example.json) 
 
