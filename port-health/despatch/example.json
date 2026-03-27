@@ -1,0 +1,14 @@
+{
+  "sourceRef": "WH-LOAD-4455", 
+  "systemCode": "WMS-LIVERPOOL",
+  "correlationId": "ae761d05-a10f-4507-a091-290c987d8b5e",
+  "category": ["despatch"],
+  "payload": {
+    "plannedDepartureTime": "2026-03-27T15:00:00Z",
+    "actualDepartureTime": "2026-03-27T15:20:00Z",
+    "portOfExit": "Rotterdam",
+    "portOfExitCode": "NLRTM",
+    "portOfEntry": "Sevington",
+    "portOfEntryCode": "GBSVI"
+  }
+}
