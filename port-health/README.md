@@ -1,17 +1,24 @@
-# Pre-notification Signal
+# Port Health Signals
+This library contains the standards for notifying Port Health Authorities of arriving consignments. These signals are the primary data exchange for high-risk goods entering the UK via the Information Sharing Network (ISN).
 
-This signal is used to notify Port Health Authorities of an arriving consignment. It is the primary data exchange for high-risk goods entering the UK via the Information Sharing Network (ISN).
+## 🔄 The Workflow
+The Port Health journey consists of two linked signals:
+1. **Pre-notification:** The initial declaration of intent to import (sent by the Broker/Importer).
+2. **Despatch:** The confirmation of departure and intended arrival time (sent by the Haulier/WMS).
+
+## 🔗 Correlation Logic
+To link these signals, the **Despatch** signal must include the `correlationId` generated during the **Pre-notification** step. This ensures all data remains attached to the same physical shipment.
 
 ## 🚚 Transport Identifiers
-To ensure searchability, please use the following standards for the `identifier` field:
-* **For RoRo (Trucks):** Enter the Vehicle Registration Number (VRN).
+For the `identifier` field within the `transportMeans` array, please use:
+* **For RoRo (Trucks/Trailers):** Enter the VRN or Trailer Number.
 * **For LoLo (Containers):** Enter the Container Number.
 
-## 🔑 Organisation Tracking
-* **sourceRef**: The unique reference or job number from the originating system for traceability.
-* **systemCode**: This should be the name of the software sending the data (e.g., `TWIN`, `DESTIN8`, `INTERNAL_ERP`).
+## 🔑 Tracking Metadata
+* **sourceRef:** The unique reference or job number from the originating system.
+* **systemCode:** The name of the software sending the data (e.g., `TWIN`, `DESTIN8`).
 
-## 📁 Related Files
-* [View Technical Schema](./schema.json)
-* [View Sample Data (Truck Example)](./pre-notification/example.json) 
-
+## 📁 Documentation & Examples
+* [Master JSON Schema](./schema.json)
+* [Pre-notification Example & Guide](./pre-notification/)
+* [Despatch Example & Guide](./despatch/)
