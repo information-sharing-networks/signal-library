@@ -1,22 +1,32 @@
 {
-  "global_id": "IOTA",
-  "system_code": "TWIN",
+  "sourceRef": "PRE123456",
+  "systemCode": "TWIN",
+  "category": ["pre-notification", "test-network"],
+ 
   "payload": {
-    "chedNumbers": ["CHEDP.GB.2026.1234567"],
-    "cnCodes": ["0201300010"],
+    "portOfExit": "Rotterdam",
+    "portOfExitCode": "NLRTM",
+    "portOfEntry": "Sevington", 
+    "portOfEntryCode": "GBSVI",
     "commodityDescription": "Fresh boneless bovine meat",
+    "cnCodes": ["0201300010", "0201200090"],
     "countryOfOrigin": "IE",
-    "exporterEORI": "IE987654321",
+    "chedNumbers": ["GBX123456789"], 
     "importerEORI": "GB123456789",
     "location": "Port of Dover",
     "mode": "RoRo",
-    "transportMeans": [
+    "transportMeans": [ 
       {
         "transportMovementType": "Truck",
-        "identifier": "AB26 CDE",
-        "affixedSeal": "SEAL-12345"
+        "identifier": "ABC123"
+      },
+      {
+        "transportMovementType": "Trailer",
+        "identifier": "TRL12345",
+        "affixedSeal": "SEAL1234"
       }
-    ],
-    "sealNumbers": ["SEAL-99-88-77"]
-  }
-}
+     ],
+    "sealNumbers": ["SEAL1234"]
+    
+    }     
+ }
