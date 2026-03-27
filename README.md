@@ -1,19 +1,25 @@
-# Signals Library
+# Signals Library 
 
-This repository contains the official definitions for all information "Signals" exchanged within our Information Sharing Networks (ISNs). 
+This repository contains the official, version-controlled definitions for all information "Signals" exchanged within our **Information Sharing Networks (ISNs)**.
 
-## Purpose
-The goal of this library is to provide a clear, readable, and verifiable standard for data sharing between Port Health Authorities, Port Operators, and Trade Partners.
+## 🎯 Purpose
+To provide a verifiable, machine-readable standard for data sharing between Port Health Authorities, Port Operators, and Trade Partners, reducing friction in the global supply chain.
 
-## 📂 Categories
-Signals are organised into directories based on the business domain for example:
+## 📂 Signal Domains
+Signals are organised by business domain. Each domain folder contains a **Master Schema** that governs all signals within that category.
 
-* **/port-health**: Core signals on pre-notifications, status updates and departures.
+| Domain | Description | Status |
+| :--- | :--- | :--- |
+| [**/port-health**](./port-health/) | Pre-notifications, Despatch events, and Port Health status. | 🟢 Active |
 
 
-## 📄 Structure of a Signal Type
-Each signal directory contains:
-1.  **README.md**: Plain-English description of when and why to use the signal.
-2.  **schema.json**: The technical validation rules for developers.
-3.  **example.json**: A sample message to help you get started quickly.
+## 📄 Structure of a Signal
+Each directory is structured to support both humans and machines:
+* **`schema.json`**: The technical "Rulebook" used by developers for API validation.
+* **`example.json`**: A "Production-Ready" sample message to accelerate integration.
+* **`README.md`**: A Plain-English guide on the business logic and field definitions.
 
+## 🚀 Getting Started
+1. Navigate to the relevant [Domain Folder](./port-health/).
+2. Review the `schema.json` to understand the data requirements.
+3. Use the `example.json` files to mock your initial API requests.
