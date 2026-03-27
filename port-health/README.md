@@ -3,8 +3,8 @@ This library contains the standards for notifying Port Health Authorities of arr
 
 ## 🔄 The Workflow
 The Port Health journey consists of two linked signals:
-1. **Pre-notification:** The initial declaration of intent to import (sent by the Broker/Importer).
-2. **Despatch:** The confirmation of departure and intended arrival time (sent by the Haulier/WMS).
+1. **Pre-notification:** The initial declaration of intent to import (sent by the Agent/Importer).
+2. **Despatch:** The confirmation of departure and intended arrival time (sent by the Haulier/Agent).
 
 ## 🔗 Correlation Logic
 To link these signals, the **Despatch** signal must include the `correlationId` generated during the **Pre-notification** step. This ensures all data remains attached to the same physical shipment.
