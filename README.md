@@ -15,9 +15,9 @@ Signals are organised by business domain. Each domain folder contains a **Master
 
 ## 📄 Structure of a Signal
 Inside each folder, you'll find everything needed to understand and integrate the signal:
-* **`schema.json`**: The technical "Rulebook" Use this to validate your data and ensure your code matches our API requirements.
-* **`example.json`**: A "Production-Ready" sample message to show you exactly how a valid signal looks.
-* **`README.md`**: A Plain-English guide. It explains the signal and defines what every field actually means.
+* **`schema.json`**: Use this to validate your data and ensure your code matches our API requirements.
+* **`example.json`**: A sample message to show you exactly how a valid signal looks.
+* **`README.md`**: A Plain-English guide explains the signal and defines what every field actually means.
 
 ## 🚀 Getting Started
 1. Navigate to the relevant [Domain Folder](./port-health/).
