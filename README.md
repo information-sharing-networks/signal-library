@@ -10,7 +10,7 @@ Signals are organised by business domain. Each domain folder contains a **Master
 
 | Domain | Description | Status |
 | :--- | :--- | :--- |
-| [**/port-health**](./port-health/) | Pre-notifications, Despatch events, and Port Health status. | 🟢 Active |
+| [**/port-health**](./port-health/) | Movement Notification, Despatch events, and Port Health status. | 🟢 Active |
 
 
 ## 📄 Structure of a Signal

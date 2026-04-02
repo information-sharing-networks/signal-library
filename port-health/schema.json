@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Port Health Master Schema",
-  "description": "Unified schema for Pre-notification and Despatch signals with Port/LOCODE.",
+  "description": "Unified schema for Movement Notification and Despatch signals with Port/LOCODE.",
   "type": "object",
   "required": ["sourceRef", "systemCode", "payload"],
   "properties": {
@@ -16,18 +16,18 @@
     "correlationId": {
       "type": "string",
       "format": "uuid",
-      "description": "The system-generated UUID. Required in Despatch to link to the original Pre-notification."
+      "description": "The system-generated UUID. Required in Despatch to link to the original Movement Notification."
     },
     "category": {
       "type": "array",
       "description": "Metadata tags for searching and filtering.",
       "items": { "type": "string" },
-      "examples": [["pre-notification", "test"]]
+      "examples": [["Movement Notification", "test"]]
     },
     "payload": {
       "oneOf": [
         {
-          "title": "Pre-notification",
+          "title": "Movement Notification",
           "type": "object",
           "required": [
             "cnCodes",

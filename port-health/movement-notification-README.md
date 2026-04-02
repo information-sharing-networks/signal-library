@@ -1,5 +1,5 @@
-# Pre-notification Signal
-The **Pre-notification** is the first message sent in the Port Health workflow. It declares the "Intent to Import" and provides the Port Health Authority (PHA) with the necessary data to perform a risk assessment before the goods arrive.
+# Movement Notification Signal
+The **Movement Notification** is the first message sent in the Port Health workflow. It declares the "Intent to Import" and provides the Port Health Authority (PHA) with the necessary data to perform a risk assessment before the goods arrive.
 
 ## 📋 Data Dictionary
 
@@ -8,7 +8,7 @@ The **Pre-notification** is the first message sent in the Port Health workflow. 
 | :--- | :--- | :--- |
 | `sourceRef` | String | Your internal system reference (e.g., JOB-12345). |
 | `systemCode` | String | The name of your software platform (e.g., TWIN). |
-| `category` | Array | Tags for filtering (e.g., `["pre-notification", "test-network"]`). |
+| `category` | Array | Tags for filtering (e.g., `["Movement Notification", "test-network"]`). |
 
 ### Payload Details
 | Field | Requirement | Description |
