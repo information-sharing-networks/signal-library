@@ -32,5 +32,5 @@ All timestamps must follow the **ISO 8601** (UTC) format:
 *Example:* `2026-03-27T15:20:00Z`
 
 ## 📁 Related Links
-* [View Despatch Example](./example.json)
+* [View Despatch Example](./despatch-example.json)
 * [Back to Master Port Health Guide](../README.md)
