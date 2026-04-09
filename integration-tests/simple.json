@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/information-sharing-networks/signals-library/main/simple.json",
+  "$id": "https://github.com/information-sharing-networks/signal-library/blob/main/integration-tests/simple.json",
   "title": "Integration Test Schema",
   "description": "Integration Test Schema (Simple)",
   "type": "object",

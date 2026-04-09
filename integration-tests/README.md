@@ -1,4 +1,4 @@
-schemas used in signalsd integration test 
+schemas used in signalsd integration tests 
 
  ⚠ take care if editing existing schemas as you may break tests that prevent the application being deployed. if in doubt, create a new one.
 
