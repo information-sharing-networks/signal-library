@@ -1,8 +1,7 @@
 {
-  "sourceRef": "PRE123456",
-  "systemCode": "TWIN",
-  "category": ["Movement Notification", "test-network"],
- 
+  "originRecordID": "PRE123456",
+  "originSystemCode": "TWIN",
+  "category": ["Movement Notification"],
   "payload": {
     "portOfExit": "Rotterdam",
     "portOfExitCode": "NLRTM",
@@ -25,8 +24,7 @@
         "identifier": "TRL12345",
         "affixedSeal": "SEAL1234"
       }
-     ],
-    "sealNumbers": ["SEAL1234"]
-    
-    }     
- }
+    ],
+    "sealNumbers": ["SEAL1234"] 
+  }     
+}

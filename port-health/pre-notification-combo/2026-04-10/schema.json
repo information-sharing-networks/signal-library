@@ -3,13 +3,13 @@
   "title": "Port Health Master Schema",
   "description": "Unified schema for Movement Notification and Despatch signals with Port/LOCODE.",
   "type": "object",
-  "required": ["sourceRef", "systemCode", "payload"],
+  "required": ["originRecordID", "originSystemCode", "payload"],
   "properties": {
-    "sourceRef": {
+    "originRecordID": {
       "type": "string",
       "description": "The human-readable reference for provenance (e.g., PRE123456)."
     },
-    "systemCode": {
+    "originSystemCode": {
       "type": "string",
       "description": "The originating system code (e.g., TWIN, DESTIN8)."
     },

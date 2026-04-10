@@ -15,8 +15,8 @@ For the `identifier` field within the `transportMeans` array, please use:
 * **For LoLo (Containers):** Enter the Container Number.
 
 ## 🔑 Tracking Metadata
-* **sourceRef:** The unique reference or job number from the originating system.
-* **systemCode:** The name of the software sending the data (e.g., `TWIN`, `DESTIN8`).
+* **originRecordID:** The unique reference or job number from the originating system.
+* **originSystemCode:** The name of the software sending the data (e.g., `TWIN`, `DESTIN8`).
 
 ## 📁 Documentation & Examples
 * [Master JSON Schema](./schema.json)

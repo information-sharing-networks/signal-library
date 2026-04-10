@@ -6,8 +6,8 @@ The **Movement Notification** is the first message sent in the Port Health workf
 ### Header Fields
 | Field | Type | Description |
 | :--- | :--- | :--- |
-| `sourceRef` | String | Your internal system reference (e.g., JOB-12345). |
-| `systemCode` | String | The name of your software platform (e.g., TWIN). |
+| `originRecordID` | String | Your internal system reference (e.g., JOB-12345). |
+| `originSystemCode` | String | The name of your software platform (e.g., TWIN). |
 | `category` | Array | Tags for filtering (e.g., `["Movement Notification", "test-network"]`). |
 
 ### Payload Details
