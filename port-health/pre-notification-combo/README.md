@@ -3,6 +3,11 @@
 
 This directory contains the unified standard for the Information Sharing Network (ISN). This combined approach allows developers to manage the entire Port Health lifecycle—from initial intent to physical departure—using a single validation framework.
 
+## 📅 Versioning Strategy
+We use **Date-Based Snapshots** (e.g., `2026-04-10`) instead of traditional version numbers. 
+* **Why?** This provides a clear chronological audit trail. 
+* **Integration:** Developers should always refer to the most recent date folder for the latest schema and business logic. Old snapshots are preserved to ensure backward compatibility for existing integrations.
+
 ## 🏗️ Core Metadata & Provenance
 To ensure a clear audit trail between originating systems and the ISN, the following fields are **required** for all signals:
 
