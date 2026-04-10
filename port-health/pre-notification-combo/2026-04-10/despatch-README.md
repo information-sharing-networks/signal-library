@@ -12,7 +12,7 @@ Without this ID, the system cannot link the departure time to the commodity data
 | Field | Type | Description |
 | :--- | :--- | :--- |
 | `originRecordID` | String | Your internal trip or load ID (e.g., TRIP-4455). |
-| `originSystemCode` | String | The name of the dispatching software (e.g., WMS-LIVERPOOL). |
+| `originSystemCode` | String | The name of the dispatching software (e.g., TWIN). |
 | `correlationId` | UUID | **Mandatory.** The ID from the Movement Notification signal. |
 
 ### Payload Details
