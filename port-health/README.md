@@ -3,7 +3,7 @@ Developers can choose between two integration patterns depending on their system
 
 ### 1. Combined Approach (Recommended)
 Use this if you want a single schema that handles both signal types or combined payloads.
-* [Combined Standards & Schema](./pre-notification-combo/2026-04-10/)
+* [Combined Standards & Documentation](./pre-notification-combo/)
 * Includes the master schema, field guides, and combo examples.
 
 ### 2. Individual Signal Approach
