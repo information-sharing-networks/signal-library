@@ -20,6 +20,7 @@ Without this ID, the system cannot link the departure time to the commodity data
 | :--- | :--- | :--- |
 | `plannedDepartureTime` | **Required** | The scheduled time of departure (ISO 8601). |
 | `actualDepartureTime` | Optional | The timestamp the vehicle actually left the yard. |
+| `destinationPlant` | Optional | The specific processing facility where the consignment is being delivered. |
 | `portOfExit` | **Required** | The departure port name (e.g., Rotterdam). |
 | `portOfExitCode` | Optional | UN/LOCODE of the actual departure point (e.g., `NLRTM`). |
 | `portOfEntry` | **Required** | The intended UK arrival port (e.g., Sevington). |
