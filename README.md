@@ -41,7 +41,7 @@ c.f the [API doco](https://signalsd-staging.corridorone.uk/docs#post-/api/isn/-i
 ## Signal Type Definitions
 Inside each folder, you'll find everything needed to understand and integrate the signal:
 * **`schema.json`**: Use this to validate your data and ensure your code matches our API requirements.
-* **`example.json`**: A sample message to show you exactly how a valid signal looks.
+* **`example.md`**: A sample message to show you exactly how a valid signal looks.
 * **`README.md`**: A Plain-English guide explains the signal and defines what every field actually means.
 
 See the [API docs](https://signalsd-staging.corridorone.uk/docs) on how to send signals to the ISN
