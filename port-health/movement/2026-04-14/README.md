@@ -1,16 +1,20 @@
-# Movement Notification Signal
-The **Movement Notification** is the first message sent in the Port Health workflow. It declares the "Intent to Import" and provides the Port Health Authority (PHA) with the necessary data to perform a risk assessment before the goods arrive.
+# Port Health Movement Notification
+**Version Snapshot: 2026-04-14**
 
-## 📋 Data Dictionary
+The **Movement Notification** is the first message sent in the Port Health workflow. It lets the Port Health Authority (PHA) know of a planned import and provides them with the necessary data to perform a risk assessment before the goods arrive.
 
-### Header Fields
+## Header
+
 | Field | Type | Description |
 | :--- | :--- | :--- |
 | `originRecordID` | String | Your internal system reference (e.g., JOB-12345). |
 | `originSystemCode` | String | The name of your software platform (e.g., TWIN). |
 | `category` | Array | Tags for filtering (e.g., `["Movement Notification", "test-network"]`). |
 
-### Payload Details
+`originRecordID` is an identifier that helps users navigate to the original content on your system.
+
+## Payload
+
 | Field | Requirement | Description |
 | :--- | :--- | :--- |
 | `portOfExit` | **Required** | The name of the departure port (e.g., Rotterdam). |
@@ -27,8 +31,7 @@ The **Movement Notification** is the first message sent in the Port Health workf
 | `transportMeans` | **Required** | Array of objects identifying the Truck, Trailer, or Container. |
 | `sealNumbers` | Optional | Array of all security seal numbers applied to the load. |
 
-## 🚛 Transport Identification
-For **RoRo** (Roll-on/Roll-off) movements, please provide both the Truck and the Trailer identifiers if available.
+For **RoRo** (Roll-on/Roll-off) movements, please provide both the Truck and the Trailer identifiers if available:
 
 ```json
 "transportMeans": [
@@ -42,3 +45,4 @@ For **RoRo** (Roll-on/Roll-off) movements, please provide both the Truck and the
     "affixedSeal": "SEAL1234"
   }
 ]
+```

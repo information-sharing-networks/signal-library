@@ -1,3 +1,5 @@
+# Movement Notification Example
+```json
 {
   "originRecordID": "PRE123456",
   "originSystemCode": "TWIN",
@@ -28,3 +30,4 @@
     "sealNumbers": ["SEAL1234"] 
   }     
 }
+```

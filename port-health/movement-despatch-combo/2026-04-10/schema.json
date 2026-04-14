@@ -13,11 +13,6 @@
       "type": "string",
       "description": "The originating system code (e.g., TWIN, DESTIN8)."
     },
-    "correlationId": {
-      "type": "string",
-      "format": "uuid",
-      "description": "The system-generated UUID. Required in Despatch to link to the original Movement Notification."
-    },
     "category": {
       "type": "array",
       "description": "Metadata tags for searching and filtering.",
