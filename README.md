@@ -1,11 +1,11 @@
 # Signals Library 
 
-This repository contains the version-controlled definitions (_Signal Types_) of data exchanged within an **Information Sharing Networks (ISNs)**.
+This repository contains the version-controlled definitions (_Signal Types_) of data exchanged within **Information Sharing Networks (ISNs)**.
 
-## 📂 Signal Domains
+## Signal Domains
 Signal Types are organised by business domain. Each domain folder contains with one or more Signal Type definition. The definitions describe the structure of the data that can be exchanged on ISNs where the Signal Type is enabled.
 
-## 📅 Versioning Strategy
+## Versioning Strategy
 We use **Date-Based Snapshots** (e.g., `2026-04-10`).
 
 Developers should always refer to the most recent date folder for the latest schema and business logic. Old snapshots are preserved to ensure backward compatibility for existing integrations.
@@ -38,7 +38,7 @@ Signal Types describe the data inside the `content` field.
 ```
 
 c.f the [API doco](https://signalsd-staging.corridorone.uk/docs#post-/api/isn/-isn_slug-/signal-types/-signal_type_slug-/v-sem_ver-/signals) for the signals submission API for details
-## 📄 Signal Type Definitions
+## Signal Type Definitions
 Inside each folder, you'll find everything needed to understand and integrate the signal:
 * **`schema.json`**: Use this to validate your data and ensure your code matches our API requirements.
 * **`example.json`**: A sample message to show you exactly how a valid signal looks.
@@ -46,7 +46,7 @@ Inside each folder, you'll find everything needed to understand and integrate th
 
 See the [API docs](https://signalsd-staging.corridorone.uk/docs) on how to send signals to the ISN
 
-## 🚀 Getting Started
+## Getting Started
 1. Navigate to the relevant [Domain Folder](./port-health/).
 2. Review the `schema.json` to understand the data requirements.
 3. Use the `example.json` files to mock your initial API requests.
