@@ -26,9 +26,9 @@ The **Movement payload** is the first message sent in the Port Health workflow. 
 | Field | Requirement | Description |
 | :--- | :--- | :--- |
 | `portOfExit` | **Required** | The name of the departure port (e.g., Rotterdam). |
-| `portOfExitCode` | Optional | The 5-character UN/LOCODE for departure (e.g., `NLRTM`). |
+| `portOfExitCode` | **Required** | The 5-character UN/LOCODE for departure (e.g., `NLRTM`). |
 | `portOfEntry` | **Required** | The UK port where the goods will arrive (e.g., Sevington). |
-| `portOfEntryCode` | Optional | The 5-character UN/LOCODE for arrival (e.g., `GBSVI`). |
+| `portOfEntryCode` | **Required** | The 5-character UN/LOCODE for arrival (e.g., `GBSVI`). |
 | `commodityDescription` | **Required** | Plain-text description of the goods. |
 | `cnCodes` | **Required** | Array of 10-digit Commodity Codes. |
 | `countryOfOrigin` | **Required** | 2-character ISO country code (e.g., `IE`). |
@@ -72,9 +72,9 @@ Note: use a different `local_ref` than the original Movement Notification — ot
 | `plannedDepartureTime` | **Required** | The scheduled time of departure (ISO 8601). |
 | `actualDepartureTime` | Optional | The timestamp the vehicle actually left the yard. |
 | `portOfExit` | **Required** | The departure port name (e.g., Rotterdam). |
-| `portOfExitCode` | Optional | UN/LOCODE of the actual departure point (e.g., `NLRTM`). |
+| `portOfExitCode` | **Required** | The 5-character UN/LOCODE for departure (e.g., `NLRTM`). |
 | `portOfEntry` | **Required** | The intended UK arrival port (e.g., Sevington). |
-| `portOfEntryCode` | Optional | UN/LOCODE of the intended UK arrival point (e.g., `GBSVI`). |
+| `portOfEntryCode` | **Required** | The 5-character UN/LOCODE for arrival (e.g., `GBSVI`). |
 | `destinationPlant` | Optional | The specific processing facility where the consignment is being delivered. |
 
 ## 🕒 Time Formatting

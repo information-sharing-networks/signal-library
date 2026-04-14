@@ -1,3 +1,5 @@
+**Draft - schema stil being reviewd**
+
 # Port Health Movement Notification
 **Version Snapshot: 2026-04-14**
 
@@ -18,9 +20,9 @@ The **Movement Notification** is the first message sent in the Port Health workf
 | Field | Requirement | Description |
 | :--- | :--- | :--- |
 | `portOfExit` | **Required** | The name of the departure port (e.g., Rotterdam). |
-| `portOfExitCode` | Optional | The 5-character UN/LOCODE for departure (e.g., `NLRTM`). |
+| `portOfExitCode` | **Required** | The 5-character UN/LOCODE for departure (e.g., `NLRTM`). |
 | `portOfEntry` | **Required** | The UK port where the goods will arrive (e.g., Sevington). |
-| `portOfEntryCode` | Optional | The 5-character UN/LOCODE for arrival (e.g., `GBSVI`). |
+| `portOfEntryCode` | **Required** | The 5-character UN/LOCODE for arrival (e.g., `GBSVI`). |
 | `commodityDescription` | **Required** | Plain-text description of the goods. |
 | `cnCodes` | **Required** | Array of 10-digit Commodity Codes. |
 | `countryOfOrigin` | **Required** | 2-character ISO country code (e.g., `IE`). |

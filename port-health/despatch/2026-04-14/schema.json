@@ -25,7 +25,9 @@
       "required": [
         "plannedDepartureTime",
         "portOfExit",
-        "portOfEntry"
+        "portOfExitCode",
+        "portOfEntry",
+        "portOfEntryCode"
       ],
       "properties": {
         "plannedDepartureTime": { "type": "string", "format": "date-time" },

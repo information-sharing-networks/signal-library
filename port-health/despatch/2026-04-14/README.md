@@ -1,3 +1,5 @@
+**Draft - schema stil being reviewd**
+
 # Port Health Despatch
 **Version Snapshot: 2026-04-14**
 
@@ -20,9 +22,9 @@ To link a Despatch to its Movement Notification, set `correlation_id` in the **s
 | `plannedDepartureTime` | **Required** | The scheduled time of departure (ISO 8601). |
 | `actualDepartureTime` | Optional | The timestamp the vehicle actually left the yard. |
 | `portOfExit` | **Required** | The departure port name (e.g., Rotterdam). |
-| `portOfExitCode` | Optional | UN/LOCODE of the actual departure point (e.g., `NLRTM`). |
+| `portOfExitCode` | **Required** | The 5-character UN/LOCODE for departure (e.g., `NLRTM`). |
 | `portOfEntry` | **Required** | The intended UK arrival port (e.g., Sevington). |
-| `portOfEntryCode` | Optional | UN/LOCODE of the intended UK arrival point (e.g., `GBSVI`). |
+| `portOfEntryCode` | **Required** | The 5-character UN/LOCODE for arrival (e.g., `GBSVI`). |
 | `destinationPlant` | Optional | The specific processing facility where the consignment is being delivered. |
 
 ## Time Formatting
