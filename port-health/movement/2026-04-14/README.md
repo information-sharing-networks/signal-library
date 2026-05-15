@@ -28,6 +28,7 @@ The **Movement Notification** is the first message sent in the Port Health workf
 | `countryOfOrigin` | **Required** | 2-character ISO country code (e.g., `IE`). |
 | `chedNumbers` | **Required** | The Common Health Entry Document references. |
 | `importerEORI` | **Required** | The GB EORI number of the importing entity. |
+| `exporterEORI` | **Required** | The EORI number of the exporting entity. |
 | `location` | **Required** | The current location of the goods at the time of reporting (e.g., the frontier point or departure terminal). |
 | `mode` | **Required** | The transit method (e.g., `RoRo` or `LoLo`). |
 | `transportMeans` | **Required** | Array of objects identifying the Truck, Trailer, or Container. |
