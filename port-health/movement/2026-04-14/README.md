@@ -1,4 +1,3 @@
-**Draft - schema stil being reviewd**
 
 # Port Health Movement Notification
 **Version Snapshot: 2026-04-14**
