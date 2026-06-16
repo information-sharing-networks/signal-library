@@ -1,5 +1,3 @@
-**Draft - schema stil being reviewd**
-
 # Port Health Despatch
 **Version Snapshot: 2026-04-14**
 
