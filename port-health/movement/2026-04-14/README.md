@@ -1,6 +1,7 @@
 
 # Port Health Movement Notification
 **Version Snapshot: 2026-04-14**
+**This version is now Depricated please use the new version**
 
 The **Movement Notification** is the first message sent in the Port Health workflow. It lets the Port Health Authority (PHA) know of a planned import and provides them with the necessary data to perform a risk assessment before the goods arrive.
 

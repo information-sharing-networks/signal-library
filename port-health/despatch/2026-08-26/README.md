@@ -1,6 +1,5 @@
 # Port Health Despatch
-**Version Snapshot: 2026-04-14**
-**This version is now Depricated please use the new version**
+**Version Snapshot: 2026-08-25**
 
 The **Despatch** signal is sent when goods depart. It confirms the movement is underway and should be linked to the original Movement Notification.
 
@@ -8,21 +7,21 @@ To link a Despatch to its Movement Notification, set `correlation_id` in the **s
 
 ## Header
 
-| Field | Type | Description |
-| :--- | :--- | :--- |
-| `originRecordID` | String | Your internal trip or load ID (e.g., TRIP-4455). |
-| `originSystemCode` | String | The name of the dispatching software (e.g., TWIN). |
-| `category` | Array | Tags for filtering (e.g., `["despatch", "test-network"]`). |
+| Field | Requirement | Type | Description |
+| :--- | :--- | :--- | :--- |
+| `originRecordID` | **Required** | String | Your internal trip or load ID (e.g., TRIP-4455). |
+| `originSystemCode` | **Required** | String | The name of the dispatching software (e.g., TWIN). |
+| `category` | Optional | Array | Tags for filtering (e.g., `["despatch", "test-network"]`). |
 
 ## Payload
 
 | Field | Requirement | Description |
 | :--- | :--- | :--- |
-| `plannedDepartureTime` | **Required** | The scheduled time of departure (ISO 8601). |
+| `plannedDepartureTime` | Optional | The scheduled time of departure (ISO 8601). |
 | `actualDepartureTime` | Optional | The timestamp the vehicle actually left the yard. |
-| `portOfExit` | **Required** | The departure port name (e.g., Rotterdam). |
-| `portOfExitCode` | **Required** | The 5-character UN/LOCODE for departure (e.g., `NLRTM`). |
-| `portOfEntry` | **Required** | The intended UK arrival port (e.g., Sevington). |
+| `portOfExit` | Optional | The departure port name (e.g., Rotterdam). Human readable form |
+| `portOfExitCode` | Optional | The 5-character UN/LOCODE for departure (e.g., `NLRTM`). |
+| `portOfEntry` | Optional | The intended UK arrival port (e.g., Sevington). Human readable form|
 | `portOfEntryCode` | **Required** | The 5-character UN/LOCODE for arrival (e.g., `GBSVI`). |
 | `destinationPlant` | Optional | The specific processing facility where the consignment is being delivered. |
 
