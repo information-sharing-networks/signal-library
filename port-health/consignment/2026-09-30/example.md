@@ -43,7 +43,7 @@ The client's test consignment (Calais → Dover, trade party TETA), using the [U
   },
   "@context": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld",
   "globalId": "urn:uuid:4c6e8b21-9d30-4d63-b31d-1d8435d23d99",
-  "identifier": "TETA-Test-Load",
+  "identifier": "ABC-Test-Load",
   "includedConsignment": [
     {
       "consigneeParty": {
