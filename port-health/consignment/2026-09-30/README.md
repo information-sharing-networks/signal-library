@@ -1,7 +1,6 @@
 # Consignment Signal
 **Version Snapshot: 2026-09-30**
 
-> **This is the new simplified baseline for the Consignment signal.** It replaces the earlier draft that wrapped the data in TWIN-specific `type`, `actor` and `object` fields. Those wrappers have been dropped entirely.
 
 The **Consignment** signal carries a [UN/CEFACT Consignment](https://vocabulary.uncefact.org/Consignment). The consignment data sits directly at the root of the signal content — there is no wrapper object.
 
