@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Consignment",
+  "description": "Flexible Activity Streams 2.0 style consignment signal requiring only type, actor and object. The contents of actor and object are not validated.",
+  "type": "object",
+  "required": ["type", "actor", "object"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "The Activity Streams activity type (e.g., Create, Update, Delete)."
+    },
+    "actor": {
+      "type": "object",
+      "description": "The party performing the activity. Contents are not validated."
+    },
+    "object": {
+      "type": "object",
+      "description": "The subject of the activity. Any JSON object is accepted."
+    }
+  }
+}
