@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EHC Available Notification Event",
+  "description": "Signal notifying Port Health Authorities that an Export Health Certificate is available in the ISN.",
+  "type": "object",
+  "required": [
+    "occurred_at",
+    "ehc_reference"
+  ],
+  "properties": {
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp indicating when the event occurred."
+    },
+    "ehc_reference": {
+      "type": "string",
+      "description": "The unique Export Health Certificate reference number for PHA."
+    }
+  }
+}
