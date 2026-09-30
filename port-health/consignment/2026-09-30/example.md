@@ -1,6 +1,6 @@
 # Consignment Example
 
-The client's test consignment (Calais → Dover, trade party TETA), using the [UN/CEFACT vocabulary](https://vocabulary.uncefact.org/). The data sits directly at the root of the signal content.
+The client's test consignment (Calais → Dover), using the [UN/CEFACT vocabulary](https://vocabulary.uncefact.org/). The data sits directly at the root of the signal content.
 
 ### Signal Content
 ```json
