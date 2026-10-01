@@ -1,7 +1,7 @@
 # PHA Advice Signal
 **Version Snapshot: 2026-09-30**
 
-The **PHA Advice** signal carries feedback, advice or inspection decisions from the Port Health Authority (PHA) back to traders and forwarders.
+The **PHA Advice** signal carries feedback, advice or comments from the Port Health Authority (PHA) back to traders and forwarders.
 
 The data structure has not yet been finalised with the PHA, so this schema is deliberately open.
 
