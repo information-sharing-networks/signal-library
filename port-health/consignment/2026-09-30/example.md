@@ -5,67 +5,53 @@ The client's test consignment (Calais → Dover), using the [UN/CEFACT vocabular
 ### Signal Content
 ```json
 {
+  "type": "Consignment",
+  "@context": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld",
+  "globalId": "6-GB-GB123456789000-Test-Load",
+  "identifier": "ACME-Test-Load",
   "atArrivalTransportMovement": {
-    "arrivalEvent": [
-      {
-        "type": "TransportEvent",
-        "occurrenceLogisticsLocation": {
-          "type": "LogisticsLocation",
-          "name": "Dover",
-          "identifier": {
-            "type": "https://ref.gs1.org/voc/LocationID_Type-UN_LOCODE",
-            "value": "Dover"
-          }
-        },
-        "scheduledOccurrenceDateTime": "2026-09-21T10:00:00Z"
-      }
-    ],
+    "type": "TransportMovement",
     "transportModeCode": "unece:TransportModeCodeList#3",
-    "type": "TransportMovement"
+    "arrivalEvent": {
+      "type": "TransportEvent",
+      "scheduledOccurrenceDateTime": "2026-09-21T10:00:00Z",
+      "occurrenceLogisticsLocation": {
+        "type": "LogisticsLocation",
+        "name": "Dover",
+        "identifier": "GBDVR"
+      }
+    }
   },
   "atDepartureTransportMovement": {
-    "departureEvent": [
-      {
-        "type": "TransportEvent",
-        "occurrenceLogisticsLocation": {
-          "type": "LogisticsLocation",
-          "name": "Calais",
-          "identifier": {
-            "type": "https://ref.gs1.org/voc/LocationID_Type-UN_LOCODE",
-            "value": "Calais"
-          }
-        },
-        "scheduledOccurrenceDateTime": "2026-09-20T09:30:00Z"
-      }
-    ],
+    "type": "TransportMovement",
     "transportModeCode": "unece:TransportModeCodeList#3",
-    "type": "TransportMovement"
+    "departureEvent": {
+      "type": "TransportEvent",
+      "scheduledOccurrenceDateTime": "2026-09-20T09:30:00Z",
+      "occurrenceLogisticsLocation": {
+        "type": "LogisticsLocation",
+        "name": "Calais",
+        "identifier": "FRCQF"
+      }
+    }
   },
-  "@context": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld",
-  "globalId": "urn:uuid:4c6e8b21-9d30-4d63-b31d-1d8435d23d99",
-  "identifier": "ABC-Test-Load",
   "includedConsignment": [
     {
-      "consigneeParty": {
-        "@context": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld",
-        "registeredId": {
-          "@type": "https://ref.gs1.org/voc/OrganizationID_Type-EORI",
-          "@value": "FR123456789000"
-        },
-        "role": "Consignee",
-        "type": "TradeParty"
-      },
-      "consignorParty": {
-        "@context": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld",
-        "registeredId": {
-          "@type": "https://ref.gs1.org/voc/OrganizationID_Type-EORI",
-          "@value": "GB123456789000"
-        },
-        "role": "Consignor",
-        "type": "TradeParty"
-      },
+      "type": "Consignment",
       "@context": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld",
       "identifier": "C-001",
+      "consigneeParty": {
+        "type": "TradeParty",
+        "role": "Consignee",
+        "identifier": "FR123456789000",
+        "@context": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld"
+      },
+      "consignorParty": {
+        "type": "TradeParty",
+        "role": "Consignor",
+        "identifier": "GB123456789000",
+        "@context": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld"
+      },
       "includedConsignmentItem": [
         {
           "goodsTypeCode": "1602",
@@ -76,14 +62,62 @@ The client's test consignment (Calais → Dover), using the [UN/CEFACT vocabular
           }
         }
       ],
-      "type": "Consignment"
+      "loadingLocation": {
+        "type": "LogisticsLocation",
+        "name": "Test Factory",
+        "physicalGeographicalCoordinate": {
+          "type": "GeographicalCoordinate",
+          "latitudeMeasure": 52.404874,
+          "longitudeMeasure": 18.596362
+        },
+        "postalAddress": {
+          "type": "TradeAddress",
+          "streetName": "1 Test Road",
+          "tradeAddressCountryId": "PL"
+        }
+      },
+      "unloadingLocation": {
+        "type": "LogisticsLocation",
+        "name": "Test Supermarket",
+        "physicalGeographicalCoordinate": {
+          "type": "GeographicalCoordinate",
+          "latitudeMeasure": 51.372264,
+          "longitudeMeasure": -1.83537
+        },
+        "postalAddress": {
+          "type": "TradeAddress",
+          "streetName": "2 Test Road",
+          "tradeAddressCountryId": "GB"
+        }
+      },
+      "specifiedTransportMovement": {
+        "type": "TransportMovement",
+        "transportModeCode": "unece:TransportModeCodeList#3",
+        "loadingEvent": {
+          "type": "TransportEvent",
+          "scheduledOccurrenceDateTime": "2026-09-20T08:00:00Z"
+        },
+        "unloadingEvent": {
+          "type": "TransportEvent",
+          "scheduledOccurrenceDateTime": "2026-09-21T16:30:00Z"
+        }
+      },
+      "weightUnitGrossWeightMeasure": {
+        "type": "WeightUnitMeasureType",
+        "weightUnitMeasureTypeValue": 15000,
+        "weightUnitMeasureTypeCode": "KGM"
+      },
+      "weightUnitNetWeightMeasure": {
+        "type": "WeightUnitMeasureType",
+        "weightUnitMeasureTypeValue": 13250,
+        "weightUnitMeasureTypeCode": "KGM"
+      }
     }
   ],
-  "type": "Consignment",
   "utilizedTransportEquipment": [
     {
       "type": "LogisticsTransportEquipment",
-      "identifier": "AB12CDE"
+      "identifier": "TR41LER"
     }
   ],
   "weightUnitGrossWeightMeasure": {

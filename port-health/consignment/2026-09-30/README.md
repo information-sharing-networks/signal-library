@@ -8,7 +8,7 @@ The **Consignment** signal carries a [UN/CEFACT Consignment](https://vocabulary.
 
 | Field | Requirement | Type | Description |
 | :--- | :--- | :--- | :--- |
-| `identifier` | **Required** | String | The unique identifier for this consignment (e.g., `ABC-Test-Load`). |
+| `identifier` | **Required** | String | The unique identifier for this consignment (e.g., `ACME-Test-Load`). |
 
 All other fields are optional and are not validated. Senders should follow the [UN/CEFACT Consignment](https://vocabulary.uncefact.org/Consignment) vocabulary, for example:
 

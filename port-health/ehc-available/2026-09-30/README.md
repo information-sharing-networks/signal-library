@@ -14,7 +14,7 @@ Any other fields are allowed and are not validated. Useful optional fields inclu
 
 | Field | Description |
 | :--- | :--- |
-| `consignment_id` | The `identifier` of the related Consignment signal (e.g., `ABC-Test-Load`). |
+| `consignment_id` | The `identifier` of the related Consignment signal (e.g., `ACME-Test-Load`). |
 | `issuing_authority` | The authority that issued the EHC. |
 | `commodity_description` | Plain-text description of the goods. |
 

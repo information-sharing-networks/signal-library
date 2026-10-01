@@ -1,6 +1,6 @@
 # EHC Superseded Example
 
-The EHC for consignment `ABC-Test-Load` has been reissued with a corrected net weight. The new certificate replaces `EHC-EU-2026-000123`.
+The EHC for consignment `ACME-Test-Load` has been reissued with a corrected net weight. The new certificate replaces `EHC-EU-2026-000123`.
 
 ### Signal Content
 ```json
