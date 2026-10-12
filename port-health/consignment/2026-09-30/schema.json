@@ -4,12 +4,52 @@
   "description": "Simplified UN/CEFACT Consignment payload.",
   "type": "object",
   "required": [
-    "identifier"
+    "identifier",
+    "atArrivalTransportMovement"
   ],
   "properties": {
     "identifier": {
       "type": "string",
       "description": "The unique identifier for this consignment."
+    },
+    "atArrivalTransportMovement": {
+      "type": "object",
+      "description": "The transport movement arriving at the destination port.",
+      "required": [
+        "arrivalEvent"
+      ],
+      "properties": {
+        "arrivalEvent": {
+          "type": "object",
+          "required": [
+            "occurrenceLogisticsLocation"
+          ],
+          "properties": {
+            "occurrenceLogisticsLocation": {
+              "type": "object",
+              "description": "The arrival location.",
+              "required": [
+                "identifier"
+              ],
+              "properties": {
+                "identifier": {
+                  "type": "object",
+                  "required": [
+                    "@value"
+                  ],
+                  "properties": {
+                    "@value": {
+                      "type": "string",
+                      "pattern": "^[A-Z]{2}[A-Z2-9]{3}$",
+                      "description": "The 5-character UN/LOCODE of the arrival location (e.g., GBDVR): a 2-letter country code followed by 3 letters or digits 2-9. Used for routing."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

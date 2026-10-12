@@ -1,134 +1,122 @@
 # Consignment Example
 
-The client's test consignment (Calais → Dover), using the [UN/CEFACT vocabulary](https://vocabulary.uncefact.org/). The data sits directly at the root of the signal content.
+A road consignment from Calais (`FRCQF`) to Dover (`GBDVR`), using the [UN/CEFACT vocabulary](https://vocabulary.uncefact.org/). The data sits directly at the root of the signal content.
+
+The arrival UN/LOCODE is at `atArrivalTransportMovement.arrivalEvent.occurrenceLogisticsLocation.identifier.@value`.
 
 ### Signal Content
 ```json
 {
-  "type": "Consignment",
   "@context": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld",
-  "globalId": "6-GB-GB123456789000-Test-Load",
-  "identifier": "ACME-Test-Load",
   "atArrivalTransportMovement": {
-    "type": "TransportMovement",
-    "transportModeCode": "unece:TransportModeCodeList#3",
     "arrivalEvent": {
-      "type": "TransportEvent",
-      "scheduledOccurrenceDateTime": "2026-09-21T10:00:00Z",
       "occurrenceLogisticsLocation": {
-        "type": "LogisticsLocation",
+        "identifier": {
+          "@type": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld",
+          "@value": "GBDVR"
+        },
         "name": "Dover",
-        "identifier": "GBDVR"
-      }
-    }
+        "type": "LogisticsLocation"
+      },
+      "scheduledOccurrenceDateTime": "2026-10-10T05:00:00+01:00",
+      "type": "TransportEvent"
+    },
+    "departureEvent": null,
+    "loadingEvent": null,
+    "transportModeCode": "unece:TransportModeCodeList#3",
+    "type": "TransportMovement",
+    "unloadingEvent": null
   },
   "atDepartureTransportMovement": {
-    "type": "TransportMovement",
-    "transportModeCode": "unece:TransportModeCodeList#3",
+    "arrivalEvent": null,
     "departureEvent": {
-      "type": "TransportEvent",
-      "scheduledOccurrenceDateTime": "2026-09-20T09:30:00Z",
       "occurrenceLogisticsLocation": {
-        "type": "LogisticsLocation",
+        "identifier": {
+          "@type": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld",
+          "@value": "FRCQF"
+        },
         "name": "Calais",
-        "identifier": "FRCQF"
-      }
-    }
+        "type": "LogisticsLocation"
+      },
+      "scheduledOccurrenceDateTime": "2026-10-10T03:00:00+01:00",
+      "type": "TransportEvent"
+    },
+    "loadingEvent": null,
+    "transportModeCode": "unece:TransportModeCodeList#3",
+    "type": "TransportMovement",
+    "unloadingEvent": null
   },
+  "consigneeParty": null,
+  "consignorParty": null,
+  "globalId": "6-GB-GB123456789000-260510-018",
+  "identifier": "Test-260510-018",
   "includedConsignment": [
     {
-      "type": "Consignment",
       "@context": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld",
-      "identifier": "C-001",
-      "consigneeParty": {
-        "type": "TradeParty",
-        "role": "Consignee",
-        "identifier": "FR123456789000",
-        "@context": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld"
-      },
-      "consignorParty": {
-        "type": "TradeParty",
-        "role": "Consignor",
-        "identifier": "GB123456789000",
-        "@context": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld"
-      },
-      "includedConsignmentItem": [
-        {
-          "goodsTypeCode": "1602",
-          "information": "Chicken Wings",
-          "originCountry": {
-            "type": "Country",
-            "countryId": "PL"
-          }
-        }
-      ],
-      "loadingLocation": {
-        "type": "LogisticsLocation",
-        "name": "Test Factory",
-        "physicalGeographicalCoordinate": {
-          "type": "GeographicalCoordinate",
-          "latitudeMeasure": 52.404874,
-          "longitudeMeasure": 18.596362
-        },
-        "postalAddress": {
-          "type": "TradeAddress",
-          "streetName": "1 Test Road",
-          "tradeAddressCountryId": "PL"
-        }
-      },
-      "unloadingLocation": {
-        "type": "LogisticsLocation",
-        "name": "Test Supermarket",
-        "physicalGeographicalCoordinate": {
-          "type": "GeographicalCoordinate",
-          "latitudeMeasure": 51.372264,
-          "longitudeMeasure": -1.83537
-        },
-        "postalAddress": {
-          "type": "TradeAddress",
-          "streetName": "2 Test Road",
-          "tradeAddressCountryId": "GB"
-        }
-      },
+      "atArrivalTransportMovement": null,
+      "atDepartureTransportMovement": null,
+      "consigneeParty": null,
+      "consignorParty": null,
+      "globalId": null,
+      "identifier": "260510-018",
+      "includedConsignment": null,
+      "includedConsignmentItem": null,
+      "loadingLocation": null,
+      "packageQuantity": null,
       "specifiedTransportMovement": {
-        "type": "TransportMovement",
-        "transportModeCode": "unece:TransportModeCodeList#3",
+        "arrivalEvent": null,
+        "departureEvent": null,
         "loadingEvent": {
-          "type": "TransportEvent",
-          "scheduledOccurrenceDateTime": "2026-09-20T08:00:00Z"
+          "occurrenceLogisticsLocation": null,
+          "scheduledOccurrenceDateTime": "2026-10-08T22:00:00",
+          "type": "TransportEvent"
         },
+        "transportModeCode": "unece:TransportModeCodeList#3",
+        "type": "TransportMovement",
         "unloadingEvent": {
-          "type": "TransportEvent",
-          "scheduledOccurrenceDateTime": "2026-09-21T16:30:00Z"
+          "occurrenceLogisticsLocation": null,
+          "scheduledOccurrenceDateTime": "2026-10-11T12:00:00",
+          "type": "TransportEvent"
         }
       },
+      "summaryDescription": null,
+      "type": "Consignment",
+      "unloadingLocation": null,
+      "utilizedTransportEquipment": null,
       "weightUnitGrossWeightMeasure": {
         "type": "WeightUnitMeasureType",
-        "weightUnitMeasureTypeValue": 15000,
-        "weightUnitMeasureTypeCode": "KGM"
+        "weightUnitMeasureTypeCode": "KGM",
+        "weightUnitMeasureTypeValue": 22480
       },
       "weightUnitNetWeightMeasure": {
         "type": "WeightUnitMeasureType",
-        "weightUnitMeasureTypeValue": 13250,
-        "weightUnitMeasureTypeCode": "KGM"
+        "weightUnitMeasureTypeCode": "KGM",
+        "weightUnitMeasureTypeValue": 19831.8
       }
     }
   ],
+  "includedConsignmentItem": null,
+  "loadingLocation": null,
+  "packageQuantity": null,
+  "specifiedTransportMovement": null,
+  "summaryDescription": null,
+  "type": "Consignment",
+  "unloadingLocation": null,
   "utilizedTransportEquipment": [
     {
-      "type": "LogisticsTransportEquipment",
-      "identifier": "TR41LER"
+      "identifier": "WZ750EE",
+      "type": "LogisticsTransportEquipment"
     }
   ],
   "weightUnitGrossWeightMeasure": {
     "type": "WeightUnitMeasureType",
-    "weightUnitMeasureTypeValue": 15000,
-    "weightUnitMeasureTypeCode": "KGM"
+    "weightUnitMeasureTypeCode": "KGM",
+    "weightUnitMeasureTypeValue": 22480
   },
   "weightUnitNetWeightMeasure": {
     "type": "WeightUnitMeasureType",
-    "weightUnitMeasureTypeValue": 13250,
-    "weightUnitMeasureTypeCode": "KGM"
+    "weightUnitMeasureTypeCode": "KGM",
+    "weightUnitMeasureTypeValue": 19831.8
   }
 }
 ```
