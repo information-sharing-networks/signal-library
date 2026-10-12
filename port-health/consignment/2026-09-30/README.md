@@ -9,7 +9,13 @@ The **Consignment** signal carries a [UN/CEFACT Consignment](https://vocabulary.
 | Field | Requirement | Type | Description |
 | :--- | :--- | :--- | :--- |
 | `identifier` | **Required** | String | The unique identifier for this consignment (e.g., `ACME-Test-Load`). |
-| `atArrivalTransportMovement.arrivalEvent.occurrenceLogisticsLocation.identifier.@value` | **Required** | String | The 5-character UN/LOCODE of the arrival location (e.g., `GBDVR`): a 2-letter country code followed by 3 uppercase letters or digits 2–9. Must match `^[A-Z]{2}[A-Z2-9]{3}$`. |
+| Arrival UN/LOCODE | **Required** | String | The 5-character UN/LOCODE of the arrival location (e.g., `GBDVR`): a 2-letter country code followed by 3 uppercase letters or digits 2–9. Must match `^[A-Z]{2}[A-Z2-9]{3}$`. Full path below. |
+
+Full path of the **Arrival UN/LOCODE**:
+
+```
+atArrivalTransportMovement.arrivalEvent.occurrenceLogisticsLocation.identifier.@value
+```
 
 ### Arrival UN/LOCODE (required for routing)
 
@@ -30,11 +36,7 @@ The arrival UN/LOCODE in `atArrivalTransportMovement` is **required**, because i
 }
 ```
 
-Use this path as the routing field in signalsd:
-
-```
-atArrivalTransportMovement.arrivalEvent.occurrenceLogisticsLocation.identifier.@value
-```
+Use the full path shown above as the routing field in signalsd.
 
 All other fields are optional and are not validated. Senders should follow the [UN/CEFACT Consignment](https://vocabulary.uncefact.org/Consignment) vocabulary, for example:
 
