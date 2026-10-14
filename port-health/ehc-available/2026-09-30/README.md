@@ -18,6 +18,8 @@ Any other fields are allowed and are not validated. Useful optional fields inclu
 | `issuing_authority` | The authority that issued the EHC. |
 | `commodity_description` | Plain-text description of the goods. |
 
-To link this signal to an existing Consignment signal in the ISN, send it with that signal's `correlation_id`.
+## Correlation ID (required)
+
+This is an event signal type, so each signal **must** be sent with a `correlation_id` in the submission wrapper, set to the `signal_id` of the Consignment signal the EHC is for. Requests containing an event without a `correlation_id` are rejected (400), and a `correlation_id` that isn't found in the same ISN fails with `invalid_correlation_id`.
 
 See [example.md](./example.md) for a full example.

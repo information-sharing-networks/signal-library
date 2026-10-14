@@ -20,6 +20,10 @@ All other fields are optional and are not validated. Typical fields include:
 | `decision` | The PHA's decision or next step. |
 | `comments` | Any further notes from the PHA. |
 
-To link the advice to the signal it responds to (e.g., an EHC Available signal), send it with that signal's `correlation_id`.
+## Correlation ID (required)
+
+This is an event signal type, so each signal **must** be sent with a `correlation_id` in the submission wrapper, set to the `signal_id` of the Consignment signal the advice is about. Requests containing an event without a `correlation_id` are rejected (400), and a `correlation_id` that isn't found in the same ISN fails with `invalid_correlation_id`.
+
+Correlate to the Consignment directly, not to the EHC Available or other event it responds to (correlation is only one level deep). Use `ehc_reference` to identify the EHC.
 
 See [example.md](./example.md) for a full example.

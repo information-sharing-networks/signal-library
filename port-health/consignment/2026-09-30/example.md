@@ -2,9 +2,25 @@
 
 A road consignment from Calais (`FRCQF`) to Dover (`GBDVR`), using the [UN/CEFACT vocabulary](https://vocabulary.uncefact.org/). The data sits directly at the root of the signal content.
 
-The arrival UN/LOCODE is at `atArrivalTransportMovement.arrivalEvent.occurrenceLogisticsLocation.identifier.@value`.
+### Signal Content (required fields only)
+Only `identifier` and the arrival UN/LOCODE (`atArrivalTransportMovement.arrivalEvent.occurrenceLogisticsLocation.identifier.@value`) are required.
+```json
+{
+  "identifier": "ACME-Test-Load",
+  "atArrivalTransportMovement": {
+    "arrivalEvent": {
+      "occurrenceLogisticsLocation": {
+        "identifier": {
+          "@value": "GBDVR"
+        }
+      }
+    }
+  }
+}
+```
 
-### Signal Content
+### Signal Content with optional UN/CEFACT fields
+A full payload. Apart from the two required fields above, every field here is an **optional** [UN/CEFACT Consignment](https://vocabulary.uncefact.org/Consignment) field. They are shown to illustrate a realistic payload and are not required or validated (see the [README](./README.md)).
 ```json
 {
   "@context": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld",
@@ -49,7 +65,7 @@ The arrival UN/LOCODE is at `atArrivalTransportMovement.arrivalEvent.occurrenceL
   "consigneeParty": null,
   "consignorParty": null,
   "globalId": "6-GB-GB123456789000-260510-018",
-  "identifier": "Test-260510-018",
+  "identifier": "ACME-Test-Load",
   "includedConsignment": [
     {
       "@context": "https://vocabulary.uncefact.org/unece-context-D23B.jsonld",
@@ -118,5 +134,30 @@ The arrival UN/LOCODE is at `atArrivalTransportMovement.arrivalEvent.occurrenceL
     "weightUnitMeasureTypeCode": "KGM",
     "weightUnitMeasureTypeValue": 19831.8
   }
+}
+```
+
+### Submission Wrapper
+The content is sent inside the submission wrapper. Consignment is not an event type, so it is sent **without** a `correlation_id`. To update the consignment later, resend it with the same `local_ref`; a new version is stored.
+```json
+{
+  "batch_ref": "consignments-2026-10-10",
+  "signals": [
+    {
+      "local_ref": "ACME-Test-Load",
+      "content": {
+        "identifier": "ACME-Test-Load",
+        "atArrivalTransportMovement": {
+          "arrivalEvent": {
+            "occurrenceLogisticsLocation": {
+              "identifier": {
+                "@value": "GBDVR"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
 }
 ```

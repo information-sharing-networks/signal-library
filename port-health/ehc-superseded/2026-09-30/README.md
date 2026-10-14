@@ -13,6 +13,10 @@ The **EHC Superseded** signal alerts Port Health Authorities (PHAs) that an Expo
 
 Any other fields are allowed and are not validated, so senders can add extra details in whatever format suits them.
 
-To link this signal to the original EHC Available signal in the ISN, send it with that signal's `correlation_id`.
+## Correlation ID (required)
+
+This is an event signal type, so each signal **must** be sent with a `correlation_id` in the submission wrapper, set to the `signal_id` of the Consignment signal the EHC is for. Requests containing an event without a `correlation_id` are rejected (400), and a `correlation_id` that isn't found in the same ISN fails with `invalid_correlation_id`.
+
+Correlate to the Consignment directly, not to the original EHC Available signal (correlation is only one level deep, so events correlated to other events don't appear with the Consignment). Identify the replaced EHC in `reason`.
 
 See [example.md](./example.md) for a full example.

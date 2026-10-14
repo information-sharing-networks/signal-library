@@ -52,12 +52,10 @@ All other fields are optional and are not validated. Senders should follow the [
 | `weightUnitGrossWeightMeasure` | Gross weight of the load. |
 | `weightUnitNetWeightMeasure` | Net weight of the load. |
 
-## What the old wrapper fields are replaced by
+## Correlation ID (not needed)
 
-| Old field | Now handled by |
-| :--- | :--- |
-| `type` (`Create` / `Update`) | New signals are sent without a `correlation_id`; updates use the `correlation_id` of the signal they relate to. |
-| `actor` | signalsd records the account that submitted each signal. |
-| `object` | The consignment data now sits at the root of the signal content. |
+Consignment is not an event type, so send it **without** a `correlation_id`. Event signals (EHC Available, EHC Superseded, PHA Advice) are correlated to the Consignment: they set their `correlation_id` to the Consignment's `signal_id`, which is returned when the Consignment is submitted.
+
+
 
 See [example.md](./example.md) for a full example.
